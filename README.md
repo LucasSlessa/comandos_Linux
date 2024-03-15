@@ -37,6 +37,7 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `chown <usuário> <arquivo>`: Altera o proprietário de um arquivo.
 - `man <comando>`: Exibe o manual de um comando.
 - `id`: Mostra a identificação do usuário e dos grupos.
+- `su <User>`: Troca para o usuário desejado.
 
 
 ## Comandos do Vim:
@@ -47,7 +48,7 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `esc + q!`: Sai do Vim sem salvar.
 - `esc + wq`: Sai do Vim e salva as alterações.
 - `i` ou `r`: Entra no modo de edição para editar o conteúdo do arquivo.
-- - `:w`: Salva o arquivo.
+-  `:w`: Salva o arquivo.
 - `:q`: Sai do Vim.
 - `:q!`: Sai do Vim sem salvar as alterações.
 - `:wq`: Salva as alterações e sai do Vim.
@@ -89,6 +90,59 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `loginctl enable-linger <usuário>`: Habilita a execução de serviços do usuário em background.
 - `loginctl disable-linger <usuário>`: Desabilita a execução de serviços do usuário em background.
 
+## Comandos de DNS:
+
+- `dig <domínio>`: Realiza uma consulta DNS para o domínio especificado.
+- `dig <domínio> +short`: Exibe apenas o resultado da consulta DNS de forma resumida.
+- `nslookup <domínio>`: Realiza uma consulta DNS para o domínio especificado.
+- `host <domínio>`: Realiza uma consulta DNS para o domínio especificado e exibe informações sobre ele.
+- `host <endereço IP>`: Realiza uma consulta DNS reversa para o endereço IP especificado.
+- `hostname`: Exibe o nome do host local.
+- `hostname -f`: Exibe o nome completo do host local (incluindo o domínio).
+- `hostname -i`: Exibe o endereço IP do host local.
+- `hostname -d`: Exibe o domínio do host local.
+- `hostname -f`: Exibe o nome completo do host local
+# Comandos de Firewall
 
 
-Para mais comandos e informações, consulte a documentação oficial do Linux e do Vim.
+
+## iptables
+
+- `iptables -L`: Lista todas as regras de firewall.
+- `iptables -A INPUT -s <IP> -j DROP`: Adiciona uma regra para bloquear pacotes provenientes do IP especificado.
+- `iptables -A OUTPUT -d <IP> -j DROP`: Adiciona uma regra para bloquear pacotes destinados ao IP especificado.
+- `iptables -A FORWARD -s <IP> -j DROP`: Adiciona uma regra para bloquear pacotes encaminhados do IP especificado.
+- `iptables -A INPUT -p <protocolo> --dport <porta> -j ACCEPT`: Adiciona uma regra para permitir tráfego na porta especificada.
+- `iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT`: Adiciona uma regra para permitir pacotes relacionados a conexões estabelecidas.
+
+## ip6tables
+
+- `ip6tables -L`: Lista todas as regras de firewall IPv6.
+- `ip6tables -A INPUT -s <IP> -j DROP`: Adiciona uma regra para bloquear pacotes IPv6 provenientes do IP especificado.
+- `ip6tables -A OUTPUT -d <IP> -j DROP`: Adiciona uma regra para bloquear pacotes IPv6 destinados ao IP especificado.
+- `ip6tables -A FORWARD -s <IP> -j DROP`: Adiciona uma regra para bloquear pacotes IPv6 encaminhados do IP especificado.
+- `ip6tables -A INPUT -p <protocolo> --dport <porta> -j ACCEPT`: Adiciona uma regra para permitir tráfego IPv6 na porta especificada.
+- `ip6tables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT`: Adiciona uma regra para permitir pacotes IPv6 relacionados a conexões estabelecidas.
+
+## ufw (Uncomplicated Firewall)
+
+- `ufw status`: Exibe o status do firewall e as regras configuradas.
+- `ufw enable`: Ativa o firewall.
+- `ufw disable`: Desativa o firewall.
+- `ufw default deny incoming`: Define a política padrão para bloquear todo o tráfego de entrada.
+- `ufw default allow outgoing`: Define a política padrão para permitir todo o tráfego de saída.
+- `ufw allow <porta>/<protocolo>`: Permite tráfego na porta especificada.
+- `ufw deny <porta>/<protocolo>`: Bloqueia tráfego na porta especificada.
+
+## firewalld
+
+- `firewall-cmd --state`: Exibe o estado do firewall.
+- `systemctl start firewalld`: Inicia o serviço do firewall.
+- `systemctl stop firewalld`: Para o serviço do firewall.
+- `firewall-cmd --list-all`: Exibe todas as configurações do firewall.
+- `firewall-cmd --zone=public --add-port=<porta>/<protocolo>`: Permite tráfego na porta especificada na zona pública.
+- `firewall-cmd --zone=public --remove-port=<porta>/<protocolo>`: Remove permissão de tráfego na porta especificada na zona pública.
+
+
+
+
