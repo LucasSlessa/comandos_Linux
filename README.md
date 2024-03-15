@@ -47,6 +47,17 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `esc + q!`: Sai do Vim sem salvar.
 - `esc + wq`: Sai do Vim e salva as alterações.
 - `i` ou `r`: Entra no modo de edição para editar o conteúdo do arquivo.
+- - `:w`: Salva o arquivo.
+- `:q`: Sai do Vim.
+- `:q!`: Sai do Vim sem salvar as alterações.
+- `:wq`: Salva as alterações e sai do Vim.
+- `:x`: Salva as alterações e sai do Vim (equivalente a `:wq`).
+- `:set number`: Mostra o número de linhas.
+- `:set nonumber`: Oculta o número de linhas.
+- `:sp <arquivo>`: Abre um novo arquivo na mesma janela, dividindo verticalmente.
+- `:vsp <arquivo>`: Abre um novo arquivo na mesma janela, dividindo horizontalmente.
+- `Ctrl + w + w`: Alterna entre as janelas divididas.
+- `Ctrl + w + q`: Fecha a janela atual.
 
 ## Comandos de Servidor:
 
@@ -56,5 +67,16 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `netstat -tulnp`: Mostra as portas TCP e UDP em uso e os programas que as estão utilizando.
 - `uptime`: Mostra o tempo de atividade do sistema.
 - `whoami`: Mostra o nome do usuário atual.
+- - `ifconfig`: Mostra informações sobre interfaces de rede.
+- `netstat -tulnp`: Mostra as portas TCP e UDP em uso e os programas que as estão utilizando.
+- `uptime`: Mostra o tempo de atividade do sistema.
+- `who`: Mostra informações sobre os usuários logados no sistema.
+- `ps`: Mostra os processos em execução no sistema.
+- `kill <PID>`: Mata um processo pelo seu ID de processo.
+- `service <nome do serviço> start|stop|restart`: Inicia, para ou reinicia um serviço.
+- `systemctl <ação> <nome do serviço>`: Controla serviços no systemd.
+- `journalctl`: Exibe mensagens do registro do sistema.
+- `cron`: Permite agendar tarefas para serem executadas em momentos específicos.
+
 
 Para mais comandos e informações, consulte a documentação oficial do Linux e do Vim.
