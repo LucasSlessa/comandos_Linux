@@ -67,7 +67,7 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `netstat -tulnp`: Mostra as portas TCP e UDP em uso e os programas que as estão utilizando.
 - `uptime`: Mostra o tempo de atividade do sistema.
 - `whoami`: Mostra o nome do usuário atual.
-- - `ifconfig`: Mostra informações sobre interfaces de rede.
+- `ifconfig`: Mostra informações sobre interfaces de rede.
 - `netstat -tulnp`: Mostra as portas TCP e UDP em uso e os programas que as estão utilizando.
 - `uptime`: Mostra o tempo de atividade do sistema.
 - `who`: Mostra informações sobre os usuários logados no sistema.
