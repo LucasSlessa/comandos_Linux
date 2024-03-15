@@ -90,6 +90,33 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `loginctl enable-linger <usuário>`: Habilita a execução de serviços do usuário em background.
 - `loginctl disable-linger <usuário>`: Desabilita a execução de serviços do usuário em background.
 
+## Comandos do ipmitool
+
+## Comandos de status:
+
+- `ipmitool chassis status`: Exibe o status do chassi.
+- `ipmitool power status`: Exibe o status de energia.
+
+## Comandos de energia:
+
+- `ipmitool power on`: Liga o sistema.
+- `ipmitool power off`: Desliga o sistema.
+- `ipmitool power cycle`: Reinicia o sistema.
+- `ipmitool power reset`: Reseta o sistema.
+
+## Comandos de sensor:
+
+- `ipmitool sdr list`: Lista os sensores de dados registrados.
+- `ipmitool sensor list`: Lista os sensores e seus estados.
+
+## Comandos de FRU (Field Replaceable Unit):
+
+- `ipmitool fru print`: Exibe informações sobre o FRU (Field Replaceable Unit).
+
+## Comandos de log:
+
+- `ipmitool sel list`: Lista os registros de log do sistema.
+
 ## Comandos de DNS:
 
 - `dig <domínio>`: Realiza uma consulta DNS para o domínio especificado.
