@@ -26,7 +26,7 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `du`: Mostra o uso de espaço em disco de arquivos e diretórios.
 - `cat <arquivo>`: Exibe o conteúdo de um arquivo.
 - `grep <padrão> <arquivo>`: Procura por um padrão em um arquivo.
-- `find <diretório> -name <nome do arquivo>`: Procura por arquivos em um diretório específico.
+- `find <diretório> -name <nome do arquivo>`: Procura por arquivos em um diretório específico. se usarmos `iname` ele ignora uppercases
 - `wget <URL>`: Baixa arquivos da internet.
 - `tar`: Permite criar, visualizar ou extrair arquivos .tar.
 - `zip`/`unzip`: Comprime/descomprime arquivos no formato .zip.
@@ -142,7 +142,18 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `firewall-cmd --list-all`: Exibe todas as configurações do firewall.
 - `firewall-cmd --zone=public --add-port=<porta>/<protocolo>`: Permite tráfego na porta especificada na zona pública.
 - `firewall-cmd --zone=public --remove-port=<porta>/<protocolo>`: Remove permissão de tráfego na porta especificada na zona pública.
+- `firewall-cmd --add-service=dns`:permitir trafego de dns se digitarmos `firewall-cmd --permanent --add-service=dns`: permite o dns permanente no firewall.
+- `firewall-cmd --reload`:Volta ao ultimo status salvo do firewall.
+  
+##Extras
 
 
+- `ss -ltnup` é usado para listar todas as conexões de rede TCP que estão ouvindo em um sistema Linux, juntamente com os processos associados a essas conexões. Aqui está o significado de cada opção do comando:
+- `-l`Exibe apenas as conexões que estão escutando (listening).
+- `-t` Exibe apenas as conexões TCP.
+- `-n` Exibe os números de porta e endereços IP no formato numérico, em vez de resolver nomes.
+- `-u` Exibe apenas as conexões UDP.
+- `-p` Mostra o processo que está utilizando a conexão.
+Em resumo, o comando ss -ltnup mostra todas as conexões TCP que estão escutando, juntamente com os processos associados a essas conexões, 
 
 
