@@ -70,13 +70,25 @@ Este documento contém uma lista de comandos úteis do Linux, Vim e alguns coman
 - `ifconfig`: Mostra informações sobre interfaces de rede.
 - `netstat -tulnp`: Mostra as portas TCP e UDP em uso e os programas que as estão utilizando.
 - `uptime`: Mostra o tempo de atividade do sistema.
-- `who`: Mostra informações sobre os usuários logados no sistema.
+- `who ou w`: Mostra informações sobre os usuários logados no sistema.
 - `ps`: Mostra os processos em execução no sistema.
 - `kill <PID>`: Mata um processo pelo seu ID de processo.
 - `service <nome do serviço> start|stop|restart`: Inicia, para ou reinicia um serviço.
 - `systemctl <ação> <nome do serviço>`: Controla serviços no systemd.
 - `journalctl`: Exibe mensagens do registro do sistema.
 - `cron`: Permite agendar tarefas para serem executadas em momentos específicos.
+- `loginctl list-sessions`: Lista as sessões de usuário.
+- `loginctl show-session <ID>`: Mostra detalhes sobre uma sessão específica.
+- `loginctl show-user <usuário>`: Mostra informações sobre um usuário específico.
+- `loginctl show-seat <ID>`: Mostra informações sobre um assento (seat) específico.
+- `loginctl show-session <ID> -p Type`: Mostra o tipo da sessão (por exemplo, "tty" para sessões em terminais virtuais).
+- `loginctl kill-session <ID>`: Encerra uma sessão de usuário específica.
+- `loginctl terminate-user <usuário>`: Encerra todas as sessões de um usuário.
+- `loginctl lock-session <ID>`: Bloqueia uma sessão de usuário.
+- `loginctl unlock-session <ID>`: Desbloqueia uma sessão de usuário.
+- `loginctl enable-linger <usuário>`: Habilita a execução de serviços do usuário em background.
+- `loginctl disable-linger <usuário>`: Desabilita a execução de serviços do usuário em background.
+
 
 
 Para mais comandos e informações, consulte a documentação oficial do Linux e do Vim.
